@@ -1,0 +1,13 @@
+{
+  "name": "my-monorepo",
+  "version": "1.0.0",
+  "license": "MIT",
+  "private": true,
+  "workspaces": [
+    "packages/*"
+  ],
+  "scripts": {
+    "build": "node scripts/move-main.js && yarn workspaces foreach --all run build"
+  },
+  "packageManager": "yarn@4.0.2"
+}
